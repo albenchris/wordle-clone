@@ -3,6 +3,17 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:shape="rectangle"
     >
-    <solid android:color="@color/white" />
-    <stroke android:width="2dp" android:color="@color/black" />
+    <size
+        android:width="50dp"
+        android:height="50dp"
+        />
+
+    <solid
+        android:color="@color/white"
+        />
+
+    <stroke
+        android:width="2dp"
+        android:color="@color/black"
+        />
 </shape>
