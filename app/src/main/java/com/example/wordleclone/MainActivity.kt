@@ -52,5 +52,12 @@ class MainActivity : AppCompatActivity() {
 
         adapter = ArrayAdapter(this, R.layout.grid_item, R.id.gridText, row6)
         gameBoardRow6.adapter = adapter
+
+
+        // testing TextView background color changes
+
+
     }
+
+
 }

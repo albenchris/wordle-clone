@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".MainActivity"
+    android:background="@color/black"
     >
 
     <Toolbar
@@ -26,6 +27,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="HELLO WORDL"
+            android:textColor="@color/white"
             android:textSize="30sp"
             android:textStyle="bold"
             android:layout_gravity="center"

@@ -9,11 +9,11 @@
         />
 
     <solid
-        android:color="@color/black"
+        android:color="@color/yellow"
         />
 
     <stroke
         android:width="3dp"
-        android:color="@color/grid_gray"
+        android:color="@color/yellow"
         />
 </shape>
