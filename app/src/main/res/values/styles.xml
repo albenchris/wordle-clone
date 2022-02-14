@@ -3,12 +3,24 @@
     <style name="gridRow">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_marginTop">1.5dp</item>
-        <item name="android:layout_marginBottom">1.5dp</item>
+<!--        <item name="android:layout_marginTop">1.5dp</item>-->
+<!--        <item name="android:layout_marginBottom">1.5dp</item>-->
         <item name="android:layout_gravity">center</item>
         <item name="android:gravity">center</item>
         <item name="android:horizontalSpacing">3dp</item>
         <item name="android:verticalSpacing">3dp</item>
-        <item name="android:numColumns">5</item>
+<!--        <item name="android:numColumns">5</item>-->
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+    <style name="gridItem">
+        <item name="android:layout_width">55dp</item>
+        <item name="android:layout_height">55dp</item>
+        <item name="android:layout_margin">1dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">35sp</item>
+        <item name="textAllCaps">true</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/white</item>
     </style>
 </resources>

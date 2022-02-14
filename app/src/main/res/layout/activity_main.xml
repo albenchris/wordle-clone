@@ -64,26 +64,186 @@
         android:paddingRight="25dp"
         >
 
-        <GridView android:id="@+id/gameBoardRow1"
+        <LinearLayout android:id="@+id/gameBoardRow1"
             style="@style/gridRow"
-            />
-        <GridView android:id="@+id/gameBoardRow2"
+            >
+            <TextView android:id="@+id/r1c1"
+                style="@style/gridItem"
+                android:background="@drawable/text_border"
+                />
+            <TextView android:id="@+id/r1c2"
+                style="@style/gridItem"
+                android:background="@drawable/text_border"
+                />
+            <TextView android:id="@+id/r1c3"
+                style="@style/gridItem"
+                android:background="@drawable/text_border"
+                />
+            <TextView android:id="@+id/r1c4"
+                style="@style/gridItem"
+                android:background="@drawable/text_border"
+                />
+            <TextView android:id="@+id/r1c5"
+                style="@style/gridItem"
+                android:background="@drawable/text_border"
+                />
+        </LinearLayout>
+
+        <LinearLayout android:id="@+id/gameBoardRow2"
             style="@style/gridRow"
-            />
-        <GridView android:id="@+id/gameBoardRow3"
+            >
+            <TextView android:id="@+id/r2c1"
+                style="@style/gridItem"
+                android:background="@drawable/text_border"
+                />
+            <TextView android:id="@+id/r2c2"
+                style="@style/gridItem"
+                android:background="@drawable/text_border"
+                />
+            <TextView android:id="@+id/r2c3"
+                style="@style/gridItem"
+                android:background="@drawable/text_border"
+                />
+            <TextView android:id="@+id/r2c4"
+                style="@style/gridItem"
+                android:background="@drawable/text_border"
+                />
+            <TextView android:id="@+id/r2c5"
+                style="@style/gridItem"
+                android:background="@drawable/text_border"
+                />
+        </LinearLayout>
+
+        <LinearLayout android:id="@+id/gameBoardRow3"
             style="@style/gridRow"
-            />
-        <GridView android:id="@+id/gameBoardRow4"
+            >
+            <TextView android:id="@+id/r3c1"
+                style="@style/gridItem"
+                android:background="@drawable/text_border"
+                />
+            <TextView android:id="@+id/r3c2"
+                style="@style/gridItem"
+                android:background="@drawable/text_border"
+                />
+            <TextView android:id="@+id/r3c3"
+                style="@style/gridItem"
+                android:background="@drawable/text_border"
+                />
+            <TextView android:id="@+id/r3c4"
+                style="@style/gridItem"
+                android:background="@drawable/text_border"
+                />
+            <TextView android:id="@+id/r3c5"
+                style="@style/gridItem"
+                android:background="@drawable/text_border"
+                />
+        </LinearLayout>
+
+        <LinearLayout android:id="@+id/gameBoardRow4"
             style="@style/gridRow"
-            />
-        <GridView android:id="@+id/gameBoardRow5"
+            >
+            <TextView android:id="@+id/r4c1"
+                style="@style/gridItem"
+                android:background="@drawable/text_border"
+                />
+            <TextView android:id="@+id/r4c2"
+                style="@style/gridItem"
+                android:background="@drawable/text_border"
+                />
+            <TextView android:id="@+id/r4c3"
+                style="@style/gridItem"
+                android:background="@drawable/text_border"
+                />
+            <TextView android:id="@+id/r4c4"
+                style="@style/gridItem"
+                android:background="@drawable/text_border"
+                />
+            <TextView android:id="@+id/r4c5"
+                style="@style/gridItem"
+                android:background="@drawable/text_border"
+                />
+        </LinearLayout>
+
+        <LinearLayout android:id="@+id/gameBoardRow5"
             style="@style/gridRow"
-            />
-        <GridView android:id="@+id/gameBoardRow6"
+            >
+            <TextView android:id="@+id/r5c1"
+                style="@style/gridItem"
+                android:background="@drawable/text_border"
+                />
+            <TextView android:id="@+id/r5c2"
+                style="@style/gridItem"
+                android:background="@drawable/text_border"
+                />
+            <TextView android:id="@+id/r5c3"
+                style="@style/gridItem"
+                android:background="@drawable/text_border"
+                />
+            <TextView android:id="@+id/r5c4"
+                style="@style/gridItem"
+                android:background="@drawable/text_border"
+                />
+            <TextView android:id="@+id/r5c5"
+                style="@style/gridItem"
+                android:background="@drawable/text_border"
+                />
+        </LinearLayout>
+
+        <LinearLayout android:id="@+id/gameBoardRow6"
             style="@style/gridRow"
-            />
+            >
+            <TextView android:id="@+id/r6c1"
+                style="@style/gridItem"
+                android:background="@drawable/text_border"
+                />
+            <TextView android:id="@+id/r6c2"
+                style="@style/gridItem"
+                android:background="@drawable/text_border"
+                />
+            <TextView android:id="@+id/r6c3"
+                style="@style/gridItem"
+                android:background="@drawable/text_border"
+                />
+            <TextView android:id="@+id/r6c4"
+                style="@style/gridItem"
+                android:background="@drawable/text_border"
+                />
+            <TextView android:id="@+id/r6c5"
+                style="@style/gridItem"
+                android:background="@drawable/text_border"
+                />
+        </LinearLayout>
     </LinearLayout>
 
+<!--    <LinearLayout-->
+<!--        android:layout_width="350dp"-->
+<!--        android:layout_height="420dp"-->
+<!--        android:layout_gravity="center"-->
+<!--        android:gravity="center"-->
+<!--        android:orientation="vertical"-->
+<!--        android:paddingLeft="25dp"-->
+<!--        android:paddingRight="25dp"-->
+<!--        >-->
+
+<!--        <GridView android:id="@+id/gameBoardRow1"-->
+<!--            style="@style/gridRow"-->
+<!--            />-->
+<!--        <GridView android:id="@+id/gameBoardRow2"-->
+<!--            style="@style/gridRow"-->
+<!--            />-->
+<!--        <GridView android:id="@+id/gameBoardRow3"-->
+<!--            style="@style/gridRow"-->
+<!--            />-->
+<!--        <GridView android:id="@+id/gameBoardRow4"-->
+<!--            style="@style/gridRow"-->
+<!--            />-->
+<!--        <GridView android:id="@+id/gameBoardRow5"-->
+<!--            style="@style/gridRow"-->
+<!--            />-->
+<!--        <GridView android:id="@+id/gameBoardRow6"-->
+<!--            style="@style/gridRow"-->
+<!--            />-->
+<!--    </LinearLayout>-->
 
 
     <LinearLayout

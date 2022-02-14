@@ -9,12 +9,19 @@ import android.widget.TextView
 
 class MainActivity : AppCompatActivity() {
 
-    lateinit var gameBoardRow1 : GridView
-    lateinit var gameBoardRow2 : GridView
-    lateinit var gameBoardRow3 : GridView
-    lateinit var gameBoardRow4 : GridView
-    lateinit var gameBoardRow5 : GridView
-    lateinit var gameBoardRow6 : GridView
+//    lateinit var gameBoardRow1 : GridView
+//    lateinit var gameBoardRow2 : GridView
+//    lateinit var gameBoardRow3 : GridView
+//    lateinit var gameBoardRow4 : GridView
+//    lateinit var gameBoardRow5 : GridView
+//    lateinit var gameBoardRow6 : GridView
+
+    lateinit var gameBoardRow1 : LinearLayout
+    lateinit var gameBoardRow2 : LinearLayout
+    lateinit var gameBoardRow3 : LinearLayout
+    lateinit var gameBoardRow4 : LinearLayout
+    lateinit var gameBoardRow5 : LinearLayout
+    lateinit var gameBoardRow6 : LinearLayout
 
 
     var row1 = arrayListOf<String>("L", "A", "T", "E", "R")
@@ -35,23 +42,23 @@ class MainActivity : AppCompatActivity() {
         gameBoardRow5 = findViewById(R.id.gameBoardRow5)
         gameBoardRow6 = findViewById(R.id.gameBoardRow6)
 
-        var adapter: ArrayAdapter<String> = ArrayAdapter(this, R.layout.grid_item, R.id.gridText, row1)
-        gameBoardRow1.adapter = adapter
-
-        adapter = ArrayAdapter(this, R.layout.grid_item, R.id.gridText, row2)
-        gameBoardRow2.adapter = adapter
-
-        adapter = ArrayAdapter(this, R.layout.grid_item, R.id.gridText, row3)
-        gameBoardRow3.adapter = adapter
-
-        adapter = ArrayAdapter(this, R.layout.grid_item, R.id.gridText, row4)
-        gameBoardRow4.adapter = adapter
-
-        adapter = ArrayAdapter(this, R.layout.grid_item, R.id.gridText, row5)
-        gameBoardRow5.adapter = adapter
-
-        adapter = ArrayAdapter(this, R.layout.grid_item, R.id.gridText, row6)
-        gameBoardRow6.adapter = adapter
+//        var adapter: ArrayAdapter<String> = ArrayAdapter(this, R.layout.grid_item, R.id.gridText, row1)
+//        gameBoardRow1.adapter = adapter
+//
+//        adapter = ArrayAdapter(this, R.layout.grid_item, R.id.gridText, row2)
+//        gameBoardRow2.adapter = adapter
+//
+//        adapter = ArrayAdapter(this, R.layout.grid_item, R.id.gridText, row3)
+//        gameBoardRow3.adapter = adapter
+//
+//        adapter = ArrayAdapter(this, R.layout.grid_item, R.id.gridText, row4)
+//        gameBoardRow4.adapter = adapter
+//
+//        adapter = ArrayAdapter(this, R.layout.grid_item, R.id.gridText, row5)
+//        gameBoardRow5.adapter = adapter
+//
+//        adapter = ArrayAdapter(this, R.layout.grid_item, R.id.gridText, row6)
+//        gameBoardRow6.adapter = adapter
 
 
         // testing TextView background color changes
