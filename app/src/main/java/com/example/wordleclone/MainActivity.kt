@@ -1,11 +1,13 @@
 package com.example.wordleclone
 
+import android.graphics.drawable.Drawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ArrayAdapter
 import android.widget.GridView
 import android.widget.LinearLayout
 import android.widget.TextView
+import androidx.core.content.ContextCompat
 
 class MainActivity : AppCompatActivity() {
 
@@ -130,10 +132,10 @@ class MainActivity : AppCompatActivity() {
 
         // testing TextView background color changes
         var word = "words"
-
         var i = 0
         while (i < word.length) {
             row1[i].text = word[i].toString()
+            row1[i].background = ContextCompat.getDrawable(this, R.drawable.text_correct)
             i++
         }
 
