@@ -67,14 +67,12 @@ class MainActivity : AppCompatActivity() {
     lateinit var r6c4 : TextView
     lateinit var r6c5 : TextView
 
-    var row1 = arrayListOf<TextView>(r1c1, r1c2, r1c3, r1c4, r1c5)
-    var row2 = arrayListOf<TextView>(r2c1, r2c2, r2c3, r2c4, r2c5)
-    var row3 = arrayListOf<TextView>(r3c1, r3c2, r3c3, r3c4, r3c5)
-    var row4 = arrayListOf<TextView>(r4c1, r4c2, r4c3, r4c4, r4c5)
-    var row5 = arrayListOf<TextView>(r5c1, r5c2, r5c3, r5c4, r5c5)
-    var row6 = arrayListOf<TextView>(r6c1, r6c2, r6c3, r6c4, r6c5)
-
-
+    lateinit var row1 : List<TextView>
+    lateinit var row2 : List<TextView>
+    lateinit var row3 : List<TextView>
+    lateinit var row4 : List<TextView>
+    lateinit var row5 : List<TextView>
+    lateinit var row6 : List<TextView>
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -123,14 +121,21 @@ class MainActivity : AppCompatActivity() {
         r6c4 = findViewById(R.id.r6c4)
         r6c5 = findViewById(R.id.r6c5)
 
+        row1 = arrayListOf<TextView>(r1c1, r1c2, r1c3, r1c4, r1c5)
+        row2 = arrayListOf<TextView>(r2c1, r2c2, r2c3, r2c4, r2c5)
+        row3 = arrayListOf<TextView>(r3c1, r3c2, r3c3, r3c4, r3c5)
+        row4 = arrayListOf<TextView>(r4c1, r4c2, r4c3, r4c4, r4c5)
+        row5 = arrayListOf<TextView>(r5c1, r5c2, r5c3, r5c4, r5c5)
+        row6 = arrayListOf<TextView>(r6c1, r6c2, r6c3, r6c4, r6c5)
+
         // testing TextView background color changes
-//        var word = "later"
-//
-//        var i = 0
-//        while (i < word.length) {
-//
-//            i++
-//        }
+        var word = "words"
+
+        var i = 0
+        while (i < word.length) {
+            row1[i].text = word[i].toString()
+            i++
+        }
 
     }
 
