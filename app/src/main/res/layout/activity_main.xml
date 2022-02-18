@@ -53,6 +53,17 @@
     </Toolbar>
 
 
+<!--    <EditText-->
+<!--        android:id="@+id/invisibleEditText"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:textColor="@color/white"-->
+<!--        android:textColorHint="@color/light_gray"-->
+<!--        android:background="@color/grid_gray"-->
+<!--        android:hint="type word..."-->
+<!--        android:focusedByDefault="true"-->
+<!--        />-->
+
 
     <LinearLayout
         android:layout_width="350dp"
@@ -254,6 +265,7 @@
         android:layout_gravity="bottom"
         android:gravity="center"
         >
+
 
     </LinearLayout>
 
