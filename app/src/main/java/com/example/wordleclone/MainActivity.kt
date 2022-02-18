@@ -1,12 +1,11 @@
 package com.example.wordleclone
 
+import android.annotation.SuppressLint
 import android.graphics.drawable.Drawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.ArrayAdapter
-import android.widget.GridView
-import android.widget.LinearLayout
-import android.widget.TextView
+import android.view.View
+import android.widget.*
 import androidx.core.content.ContextCompat
 
 class MainActivity : AppCompatActivity() {
@@ -139,6 +138,29 @@ class MainActivity : AppCompatActivity() {
             i++
         }
 
+
+
+        val q : TextView = findViewById(R.id.btnQ)
+        val w : TextView = findViewById(R.id.btnW)
+        val e : TextView = findViewById(R.id.btnE)
+        val r : TextView = findViewById(R.id.btnR)
+        val t : TextView = findViewById(R.id.btnT)
+        val y : TextView = findViewById(R.id.btnY)
+
+        var lettersIndex = 0
+        val letters = arrayListOf<TextView>(q,w,e,r,t,y)
+        while (lettersIndex < letters.size) {
+            val letter : String = letters[lettersIndex].text as String
+            letters[lettersIndex].setOnClickListener {
+                typeLetter(letter)
+            }
+            lettersIndex++
+        }
+
+    }
+
+    fun typeLetter(letter: String) {
+        Toast.makeText(this, letter, Toast.LENGTH_SHORT).show()
     }
 
 
