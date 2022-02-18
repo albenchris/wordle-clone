@@ -263,84 +263,65 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:layout_gravity="bottom"
-        android:gravity="center"
+        android:gravity="bottom"
         >
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:gravity="center"
             >
-            <TextView
-                android:id="@+id/btnQ"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+            <TextView android:id="@+id/btnQ"
                 android:text="Q"
-                android:textColor="@color/white"
-                android:textSize="25sp"
-                android:background="@drawable/text_border"
-                android:layout_gravity="center"
-                android:gravity="center"
+                style="@style/keyboardLetter"
+                android:background="@drawable/keyboard_button"
                 />
-
-            <TextView
-                android:id="@+id/btnW"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+            <TextView android:id="@+id/btnW"
                 android:text="W"
-                android:textColor="@color/white"
-                android:textSize="25sp"
-                android:background="@drawable/text_border"
-                android:layout_gravity="center"
-                android:gravity="center"
+                style="@style/keyboardLetter"
+                android:background="@drawable/keyboard_button"
                 />
-
-            <TextView
-                android:id="@+id/btnE"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+            <TextView android:id="@+id/btnE"
                 android:text="E"
-                android:textColor="@color/white"
-                android:textSize="25sp"
-                android:background="@drawable/text_border"
-                android:layout_gravity="center"
-                android:gravity="center"
+                style="@style/keyboardLetter"
+                android:background="@drawable/keyboard_button"
                 />
-
-            <TextView
-                android:id="@+id/btnR"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+            <TextView android:id="@+id/btnR"
                 android:text="R"
-                android:textColor="@color/white"
-                android:textSize="25sp"
-                android:background="@drawable/text_border"
-                android:layout_gravity="center"
-                android:gravity="center"
+                style="@style/keyboardLetter"
+                android:background="@drawable/keyboard_button"
                 />
-
-            <TextView
-                android:id="@+id/btnT"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+            <TextView android:id="@+id/btnT"
                 android:text="T"
-                android:textColor="@color/white"
-                android:textSize="25sp"
-                android:background="@drawable/text_border"
-                android:layout_gravity="center"
-                android:gravity="center"
+                style="@style/keyboardLetter"
+                android:background="@drawable/keyboard_button"
                 />
-
-            <TextView
-                android:id="@+id/btnY"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+            <TextView android:id="@+id/btnY"
                 android:text="Y"
-                android:textColor="@color/white"
-                android:textSize="25sp"
-                android:background="@drawable/text_border"
-                android:layout_gravity="center"
-                android:gravity="center"
+                style="@style/keyboardLetter"
+                android:background="@drawable/keyboard_button"
+                />
+            <TextView android:id="@+id/btnU"
+                android:text="U"
+                style="@style/keyboardLetter"
+                android:background="@drawable/keyboard_button"
+                />
+            <TextView android:id="@+id/btnI"
+                android:text="I"
+                style="@style/keyboardLetter"
+                android:background="@drawable/keyboard_button"
+                />
+            <TextView android:id="@+id/btnO"
+                android:text="O"
+                style="@style/keyboardLetter"
+                android:background="@drawable/keyboard_button"
+                />
+            <TextView android:id="@+id/btnP"
+                android:text="P"
+                style="@style/keyboardLetter"
+                android:background="@drawable/keyboard_button"
                 />
 
         </LinearLayout>

@@ -131,11 +131,11 @@ class MainActivity : AppCompatActivity() {
 
         // testing TextView background color changes
         var word = "words"
-        var i = 0
-        while (i < word.length) {
-            row1[i].text = word[i].toString()
-            row1[i].background = ContextCompat.getDrawable(this, R.drawable.text_correct)
-            i++
+        var wordIndex = 0
+        while (wordIndex < word.length) {
+            row1[wordIndex].text = word[wordIndex].toString()
+            row1[wordIndex].background = ContextCompat.getDrawable(this, R.drawable.text_correct)
+            wordIndex++
         }
 
 
@@ -146,9 +146,15 @@ class MainActivity : AppCompatActivity() {
         val r : TextView = findViewById(R.id.btnR)
         val t : TextView = findViewById(R.id.btnT)
         val y : TextView = findViewById(R.id.btnY)
+        val u : TextView = findViewById(R.id.btnU)
+        val i : TextView = findViewById(R.id.btnI)
+        val o : TextView = findViewById(R.id.btnO)
+        val p : TextView = findViewById(R.id.btnP)
 
         var lettersIndex = 0
-        val letters = arrayListOf<TextView>(q,w,e,r,t,y)
+        val letters = arrayListOf<TextView>(
+            q,w,e,r,t,y,u,i,o,p
+        )
         while (lettersIndex < letters.size) {
             val letter : String = letters[lettersIndex].text as String
             letters[lettersIndex].setOnClickListener {
