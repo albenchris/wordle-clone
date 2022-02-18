@@ -3,7 +3,10 @@ package com.example.wordleclone
 import android.inputmethodservice.InputMethodService
 import android.inputmethodservice.Keyboard
 import android.inputmethodservice.KeyboardView
+import android.text.TextUtils
+import android.view.KeyEvent
 import android.view.View
+
 
 class KeyboardInputMethodService
     : InputMethodService(),
@@ -12,7 +15,7 @@ class KeyboardInputMethodService
 
     private lateinit var keyboardView: KeyboardView
     private lateinit var keyboard: Keyboard
-    private val caps = true
+    private var caps = true
 
     override fun onCreateInputView(): View {
         keyboardView = layoutInflater.inflate(R.layout.keyboard_view, null) as KeyboardView
@@ -31,7 +34,33 @@ class KeyboardInputMethodService
     }
 
     override fun onKey(primaryCode: Int, keyCodes: IntArray?) {
-        TODO("Not yet implemented")
+        val inputConnection = currentInputConnection
+        if (inputConnection != null) {
+            when (primaryCode) {
+                Keyboard.KEYCODE_DELETE -> {
+                    val selectedText = inputConnection.getSelectedText(0)
+                    if (TextUtils.isEmpty(selectedText)) {
+                        inputConnection.deleteSurroundingText(1, 0)
+                    } else {
+                        inputConnection.commitText("", 1)
+                    }
+                    keyboardView.invalidateAllKeys()
+                }
+                Keyboard.KEYCODE_DONE -> inputConnection.sendKeyEvent(
+                    KeyEvent(
+                        KeyEvent.ACTION_DOWN,
+                        KeyEvent.KEYCODE_ENTER
+                    )
+                )
+                else -> {
+                    var code = primaryCode.toChar()
+                    if (Character.isLetter(code) && caps) {
+                        code = Character.toUpperCase(code)
+                    }
+                    inputConnection.commitText(code.toString(), 1)
+                }
+            }
+        }
     }
 
     override fun onText(text: CharSequence?) {
