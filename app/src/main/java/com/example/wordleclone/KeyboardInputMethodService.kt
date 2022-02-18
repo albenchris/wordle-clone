@@ -1,12 +1,27 @@
 package com.example.wordleclone
 
 import android.inputmethodservice.InputMethodService
+import android.inputmethodservice.Keyboard
 import android.inputmethodservice.KeyboardView
+import android.view.View
 
 class KeyboardInputMethodService
     : InputMethodService(),
         KeyboardView.OnKeyboardActionListener
 {
+
+    private lateinit var keyboardView: KeyboardView
+    private lateinit var keyboard: Keyboard
+    private val caps = true
+
+    override fun onCreateInputView(): View {
+        keyboardView = layoutInflater.inflate(R.layout.keyboard_view, null) as KeyboardView
+        keyboard = Keyboard(this, R.xml.custom_keyboard)
+        keyboardView.keyboard = keyboard
+        keyboardView.setOnKeyboardActionListener(this)
+        return keyboardView
+    }
+
     override fun onPress(primaryCode: Int) {
         TODO("Not yet implemented")
     }
