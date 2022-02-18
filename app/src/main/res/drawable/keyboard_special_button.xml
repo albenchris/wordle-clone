@@ -5,8 +5,9 @@
     <corners android:radius="4dp"/>
 
     <size android:height="46dp"
-        android:width="35dp"/>
+        android:width="52.5dp"/>
 
     <solid android:color="@color/keyboard_gray"/>
+
 
 </shape>

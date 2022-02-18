@@ -189,5 +189,11 @@ class MainActivity : AppCompatActivity() {
         Toast.makeText(this, letter, Toast.LENGTH_SHORT).show()
     }
 
+    fun checkWord(v: View) {
+        Toast.makeText(this, "ENTER", Toast.LENGTH_SHORT).show()
+    }
 
+    fun backSpace(v: View) {
+        Toast.makeText(this, "BACKSPACE", Toast.LENGTH_SHORT).show()
+    }
 }
