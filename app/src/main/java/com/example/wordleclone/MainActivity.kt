@@ -151,9 +151,29 @@ class MainActivity : AppCompatActivity() {
         val o : TextView = findViewById(R.id.btnO)
         val p : TextView = findViewById(R.id.btnP)
 
+        val a : TextView = findViewById(R.id.btnA)
+        val s : TextView = findViewById(R.id.btnS)
+        val d : TextView = findViewById(R.id.btnD)
+        val f : TextView = findViewById(R.id.btnF)
+        val g : TextView = findViewById(R.id.btnG)
+        val h : TextView = findViewById(R.id.btnH)
+        val j : TextView = findViewById(R.id.btnJ)
+        val k : TextView = findViewById(R.id.btnK)
+        val l : TextView = findViewById(R.id.btnL)
+
+        val z : TextView = findViewById(R.id.btnZ)
+        val x : TextView = findViewById(R.id.btnX)
+        val c : TextView = findViewById(R.id.btnC)
+        val v : TextView = findViewById(R.id.btnV)
+        val b : TextView = findViewById(R.id.btnB)
+        val n : TextView = findViewById(R.id.btnN)
+        val m : TextView = findViewById(R.id.btnM)
+
         var lettersIndex = 0
         val letters = arrayListOf<TextView>(
-            q,w,e,r,t,y,u,i,o,p
+            q,w,e,r,t,y,u,i,o,p,
+            a,s,d,f,g,h,j,k,l,
+            z,x,c,v,b,n,m
         )
         while (lettersIndex < letters.size) {
             val letter : String = letters[lettersIndex].text as String

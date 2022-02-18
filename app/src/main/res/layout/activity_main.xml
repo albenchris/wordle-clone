@@ -266,12 +266,8 @@
         android:gravity="bottom"
         >
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_gravity="center"
-            android:gravity="center"
+        <LinearLayout android:id="@+id/keyboardTopRow"
+            style="@style/keyboardRow"
             >
             <TextView android:id="@+id/btnQ"
                 android:text="Q"
@@ -323,7 +319,96 @@
                 style="@style/keyboardLetter"
                 android:background="@drawable/keyboard_button"
                 />
+        </LinearLayout>
 
+        <LinearLayout android:id="@+id/keyboardMiddleRow"
+            style="@style/keyboardRow"
+            >
+            <TextView android:id="@+id/btnA"
+                android:text="A"
+                style="@style/keyboardLetter"
+                android:background="@drawable/keyboard_button"
+                />
+            <TextView android:id="@+id/btnS"
+                android:text="S"
+                style="@style/keyboardLetter"
+                android:background="@drawable/keyboard_button"
+                />
+            <TextView android:id="@+id/btnD"
+                android:text="D"
+                style="@style/keyboardLetter"
+                android:background="@drawable/keyboard_button"
+                />
+            <TextView android:id="@+id/btnF"
+                android:text="F"
+                style="@style/keyboardLetter"
+                android:background="@drawable/keyboard_button"
+                />
+            <TextView android:id="@+id/btnG"
+                android:text="G"
+                style="@style/keyboardLetter"
+                android:background="@drawable/keyboard_button"
+                />
+            <TextView android:id="@+id/btnH"
+                android:text="H"
+                style="@style/keyboardLetter"
+                android:background="@drawable/keyboard_button"
+                />
+            <TextView android:id="@+id/btnJ"
+                android:text="J"
+                style="@style/keyboardLetter"
+                android:background="@drawable/keyboard_button"
+                />
+            <TextView android:id="@+id/btnK"
+                android:text="K"
+                style="@style/keyboardLetter"
+                android:background="@drawable/keyboard_button"
+                />
+            <TextView android:id="@+id/btnL"
+                android:text="L"
+                style="@style/keyboardLetter"
+                android:background="@drawable/keyboard_button"
+                />
+        </LinearLayout>
+
+        <LinearLayout android:id="@+id/keyboardBottomRow"
+            style="@style/keyboardRow"
+            >
+            <TextView android:id="@+id/btnZ"
+                android:text="Z"
+                style="@style/keyboardLetter"
+                android:background="@drawable/keyboard_button"
+                />
+            <TextView android:id="@+id/btnX"
+                android:text="X"
+                style="@style/keyboardLetter"
+                android:background="@drawable/keyboard_button"
+                />
+            <TextView android:id="@+id/btnC"
+                android:text="C"
+                style="@style/keyboardLetter"
+                android:background="@drawable/keyboard_button"
+                />
+            <TextView android:id="@+id/btnV"
+                android:text="V"
+                style="@style/keyboardLetter"
+                android:background="@drawable/keyboard_button"
+                />
+            <TextView android:id="@+id/btnB"
+                android:text="B"
+                style="@style/keyboardLetter"
+                android:background="@drawable/keyboard_button"
+                />
+            <TextView android:id="@+id/btnN"
+                android:text="N"
+                style="@style/keyboardLetter"
+                android:background="@drawable/keyboard_button"
+                />
+            <TextView android:id="@+id/btnM"
+                android:text="M"
+                style="@style/keyboardLetter"
+                android:background="@drawable/keyboard_button"
+                />
         </LinearLayout>
 
     </LinearLayout>
