@@ -184,13 +184,7 @@ class MainActivity : AppCompatActivity() {
         if (userWord.length < 5) {
             userWord += letter
         }
-        var i = 0
-        while (i < userWord.length) {
-            attempts[currentRow][i].text = userWord[i].toString()
-            i++
-        }
-
-//        Toast.makeText(this, userWord, Toast.LENGTH_SHORT).show()
+        adjustCurrentWordDisplay()
     }
 
     fun checkWord(v: View) {
@@ -200,11 +194,23 @@ class MainActivity : AppCompatActivity() {
 
             currentRow++
         }
-
-        Toast.makeText(this, "ENTER", Toast.LENGTH_SHORT).show()
     }
 
     fun backSpace(v: View) {
-        Toast.makeText(this, "BACKSPACE", Toast.LENGTH_SHORT).show()
+        userWord = userWord.dropLast(1)
+        adjustCurrentWordDisplay()
+    }
+
+    fun adjustCurrentWordDisplay() {
+        var i = 0
+        while (i < attempts[currentRow].size) {
+            attempts[currentRow][i].text = " "
+            i++
+        }
+        i = 0
+        while (i < userWord.length) {
+            attempts[currentRow][i].text = userWord[i].toString()
+            i++
+        }
     }
 }
