@@ -162,25 +162,25 @@ class MainActivity : AppCompatActivity() {
         val n : TextView = findViewById(R.id.btnN)
         val m : TextView = findViewById(R.id.btnM)
 
-        var lettersIndex = 0
         val letters = arrayListOf<TextView>(
             q,w,e,r,t,y,u,i,o,p,
             a,s,d,f,g,h,j,k,l,
             z,x,c,v,b,n,m
         )
-        while (lettersIndex < letters.size) {
-            val letter : String = letters[lettersIndex].text as String
-            letters[lettersIndex].setOnClickListener {
+        for (letterBtn in letters) {
+            val letter : String = letterBtn.text as String
+            letterBtn.setOnClickListener {
                 typeLetter(letter)
             }
-            lettersIndex++
         }
 
     }
 
     fun typeLetter(letter: String) {
+        // exit the function if all rows are filled
         if (currentRow >= 6) return
 
+        // add letter to userWord
         if (userWord.length < 5) {
             userWord += letter
         }
@@ -197,17 +197,18 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun backSpace(v: View) {
+        // removing the last character in userWord
         userWord = userWord.dropLast(1)
         adjustCurrentWordDisplay()
     }
 
     fun adjustCurrentWordDisplay() {
-        var i = 0
-        while (i < attempts[currentRow].size) {
-            attempts[currentRow][i].text = " "
-            i++
+        // removing all visible text first
+        for (textBox in attempts[currentRow]) {
+            textBox.text = " "
         }
-        i = 0
+        // rendering each letter of userWord into corresponding TextView
+        var i = 0
         while (i < userWord.length) {
             attempts[currentRow][i].text = userWord[i].toString()
             i++
