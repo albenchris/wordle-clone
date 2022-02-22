@@ -63,6 +63,9 @@ class MainActivity : AppCompatActivity() {
     lateinit var row5 : List<TextView>
     lateinit var row6 : List<TextView>
 
+    lateinit var attempts : List<List<TextView>>
+    var currentRow = 0
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -116,6 +119,8 @@ class MainActivity : AppCompatActivity() {
         row4 = arrayListOf<TextView>(r4c1, r4c2, r4c3, r4c4, r4c5)
         row5 = arrayListOf<TextView>(r5c1, r5c2, r5c3, r5c4, r5c5)
         row6 = arrayListOf<TextView>(r6c1, r6c2, r6c3, r6c4, r6c5)
+
+        attempts = arrayListOf(row1, row2, row3, row4, row5, row6)
 
         // testing TextView background color changes
 //        var word = "words"
@@ -174,12 +179,14 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun typeLetter(letter: String) {
+        if (currentRow >= 6) return
+
         if (userWord.length < 5) {
             userWord += letter
         }
         var i = 0
         while (i < userWord.length) {
-            row1[i].text = userWord[i].toString()
+            attempts[currentRow][i].text = userWord[i].toString()
             i++
         }
 
@@ -187,6 +194,13 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun checkWord(v: View) {
+        if (userWord.length == 5) {
+
+            userWord = ""
+
+            currentRow++
+        }
+
         Toast.makeText(this, "ENTER", Toast.LENGTH_SHORT).show()
     }
 
