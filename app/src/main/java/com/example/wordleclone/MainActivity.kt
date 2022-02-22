@@ -10,20 +10,8 @@ import androidx.core.content.ContextCompat
 
 class MainActivity : AppCompatActivity() {
 
-//    lateinit var gameBoardRow1 : GridView
-//    lateinit var gameBoardRow2 : GridView
-//    lateinit var gameBoardRow3 : GridView
-//    lateinit var gameBoardRow4 : GridView
-//    lateinit var gameBoardRow5 : GridView
-//    lateinit var gameBoardRow6 : GridView
-
-    //    var row1 = arrayListOf<String>("L", "A", "T", "E", "R")
-//    var row2 = arrayListOf<String>("T", "H", "O", "S", "E")
-//    var row3 = arrayListOf<String>(" ", " ", " ", " ", " ")
-//    var row4 = arrayListOf<String>(" ", " ", " ", " ", " ")
-//    var row5 = arrayListOf<String>(" ", " ", " ", " ", " ")
-//    var row6 = arrayListOf<String>(" ", " ", " ", " ", " ")
-
+    var targetWord : String = "WORDS"
+    var userWord : String = ""
 
     lateinit var gameBoardRow1 : LinearLayout
     lateinit var gameBoardRow2 : LinearLayout
@@ -130,13 +118,13 @@ class MainActivity : AppCompatActivity() {
         row6 = arrayListOf<TextView>(r6c1, r6c2, r6c3, r6c4, r6c5)
 
         // testing TextView background color changes
-        var word = "words"
-        var wordIndex = 0
-        while (wordIndex < word.length) {
-            row1[wordIndex].text = word[wordIndex].toString()
-            row1[wordIndex].background = ContextCompat.getDrawable(this, R.drawable.text_correct)
-            wordIndex++
-        }
+//        var word = "words"
+//        var wordIndex = 0
+//        while (wordIndex < word.length) {
+//            row1[wordIndex].text = word[wordIndex].toString()
+//            row1[wordIndex].background = ContextCompat.getDrawable(this, R.drawable.text_correct)
+//            wordIndex++
+//        }
 
 
 
@@ -186,7 +174,16 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun typeLetter(letter: String) {
-        Toast.makeText(this, letter, Toast.LENGTH_SHORT).show()
+        if (userWord.length < 5) {
+            userWord += letter
+        }
+        var i = 0
+        while (i < userWord.length) {
+            row1[i].text = userWord[i].toString()
+            i++
+        }
+
+//        Toast.makeText(this, userWord, Toast.LENGTH_SHORT).show()
     }
 
     fun checkWord(v: View) {
