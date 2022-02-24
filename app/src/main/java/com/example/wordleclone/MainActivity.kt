@@ -10,7 +10,7 @@ import androidx.core.content.ContextCompat
 
 class MainActivity : AppCompatActivity() {
 
-    var targetWord : String = "WORDS"
+    var targetWord : String = "words"
     var userWord : String = ""
 
     lateinit var gameBoardRow1 : LinearLayout
@@ -170,7 +170,7 @@ class MainActivity : AppCompatActivity() {
         for (letterBtn in letters) {
             val letter : String = letterBtn.text as String
             letterBtn.setOnClickListener {
-                typeLetter(letter)
+                typeLetter(letter.toLowerCase())
             }
         }
 
