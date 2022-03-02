@@ -122,14 +122,6 @@ class MainActivity : AppCompatActivity() {
 
         attempts = arrayListOf(row1, row2, row3, row4, row5, row6)
 
-        // testing TextView background color changes
-//        var word = "words"
-//        var wordIndex = 0
-//        while (wordIndex < word.length) {
-//            row1[wordIndex].text = word[wordIndex].toString()
-//            row1[wordIndex].background = ContextCompat.getDrawable(this, R.drawable.text_correct)
-//            wordIndex++
-//        }
 
 
 
@@ -188,11 +180,32 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun checkWord(v: View) {
+        if (userWord.length != 5) {
+            return
+        }
+
+
+        // testing TextView background color changes
+//        var word = "words"
+//        var wordIndex = 0
+//        while (wordIndex < word.length) {
+//            row1[wordIndex].text = word[wordIndex].toString()
+//            row1[wordIndex].background = ContextCompat.getDrawable(this, R.drawable.text_correct)
+//            wordIndex++
+//        }
+
+        var i = 0
+        while (i < 5) {
+            when (userWord[i]) {
+                targetWord[i] -> attempts[currentRow][i].background = ContextCompat.getDrawable(this, R.drawable.text_correct)
+                else -> attempts[currentRow][i].background = ContextCompat.getDrawable(this, R.drawable.text_incorrect)
+            }
+            i++
+        }
+
         if (userWord.length == 5) {
 
-            userWord = ""
-
-            currentRow++
+            moveToNextRow()
         }
     }
 
@@ -200,6 +213,11 @@ class MainActivity : AppCompatActivity() {
         // removing the last character in userWord
         userWord = userWord.dropLast(1)
         adjustCurrentWordDisplay()
+    }
+
+    fun moveToNextRow() {
+        userWord = ""
+        currentRow++
     }
 
     fun adjustCurrentWordDisplay() {
